@@ -9,25 +9,35 @@
 
     <EditText
         android:id="@+id/textLinkImagem"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
+        app:layout_constraintTop_toBottomOf="@+id/textDescricao"
+        tools:text="Link da imagem" />
 
     <EditText
         android:id="@+id/textDescricao"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo"
+        tools:text="Descrição " />
 
     <ImageView
         android:id="@+id/imagePerfil"
@@ -41,36 +51,44 @@
         android:id="@+id/textNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="36dp"
-        android:text="TextView"
+        android:layout_marginStart="32dp"
+        android:text="NomeUsu"
+        app:layout_constraintBottom_toTopOf="@+id/textTitulo"
         app:layout_constraintStart_toEndOf="@+id/imagePerfil"
-        tools:layout_editor_absoluteY="61dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.147" />
 
     <Button
         android:id="@+id/buttonPublicar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:text="Postar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/textTitulo"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="216dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="25dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:minHeight="48dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfil"
+        tools:text="Coloque o título" />
 
     <Spinner
         android:id="@+id/spinnerCategoria"
         android:layout_width="409dp"
         android:layout_height="wrap_content"
+        android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLinkImagem"
         tools:layout_editor_absoluteX="1dp" />

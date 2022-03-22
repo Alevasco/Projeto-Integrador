@@ -4,6 +4,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ajuda.R
@@ -18,8 +19,8 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         var nome = view.findViewById<TextView>(R.id.feedNome)
         var titulo = view.findViewById<TextView>(R.id.feedTitulo)
         var descricao = view.findViewById<TextView>(R.id.feedDescricao)
-        var imagemPerfil = view.findViewById<TextView>(R.id.feedPerfil)
-        var imagemPost = view.findViewById<TextView>(R.id.feedImagem)
+        var imagemPerfil = view.findViewById<ImageView>(R.id.feedPerfil)
+        var imagemPost = view.findViewById<ImageView>(R.id.feedImagem)
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
 
     }
@@ -37,8 +38,6 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         holder.nome.text = post.nome
         holder.descricao.text = post.descricao
         holder.titulo.text = post.titulo
-        holder.imagemPost.text = post.imagemPost
-        holder.imagemPerfil.text = post.imagemPerfil
     }
 
     override fun getItemCount(): Int {

@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.navigation.fragment.findNavController
 
 class PostagemFragment : Fragment() {
 
@@ -14,7 +16,15 @@ class PostagemFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_postagem, container, false)
+        val view = inflater.inflate(R.layout.fragment_postagem, container, false)
+
+        val butaoPubli = view.findViewById<Button>(R.id.buttonPublicar)
+
+        butaoPubli.setOnClickListener {
+            findNavController().navigate(R.id.action_postagemFragment_to_listaPostagemFragment)
+        }
+
+        return view
     }
 
 }
