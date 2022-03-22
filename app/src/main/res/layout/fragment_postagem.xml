@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PostagemFragment">
+    tools:context=".PostagemFragment"
+    android:background="@drawable/background">
 
 
     <EditText
@@ -15,13 +16,14 @@
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
         android:ems="10"
+        android:hint="Link da Imagem"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textDescricao"
-        tools:text="Link da imagem" />
+        app:layout_constraintTop_toBottomOf="@+id/textDescricao" />
 
     <EditText
         android:id="@+id/textDescricao"
@@ -31,40 +33,48 @@
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
         android:ems="10"
+        android:hint="Descrição"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textTitulo"
-        tools:text="Descrição " />
+        app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
 
     <ImageView
         android:id="@+id/imagePerfil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="ImageContrastCheck"
         tools:src="@tools:sample/avatars" />
 
     <TextView
         android:id="@+id/textNome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="32dp"
-        android:text="NomeUsu"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="34dp"
+        android:text="Nome Usuario"
+        android:textColor="@color/black"
         app:layout_constraintBottom_toTopOf="@+id/textTitulo"
         app:layout_constraintStart_toEndOf="@+id/imagePerfil"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.147" />
+        app:layout_constraintVertical_bias="0.122" />
 
     <Button
         android:id="@+id/buttonPublicar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="32dp"
         android:layout_marginEnd="24dp"
+        android:backgroundTint="@color/teal_700"
         android:text="Postar"
+        app:cornerRadius="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -73,23 +83,29 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="25dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="25dp"
         android:ems="10"
+        android:hint="Coloque o título"
         android:inputType="textPersonName"
         android:minHeight="48dp"
+        android:textColor="@color/black"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imagePerfil"
-        tools:text="Coloque o título" />
+        app:layout_constraintTop_toBottomOf="@+id/imagePerfil" />
 
     <Spinner
         android:id="@+id/spinnerCategoria"
-        android:layout_width="409dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:contentDescription="@string/app_name"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLinkImagem"
-        tools:layout_editor_absoluteX="1dp" />
+        app:layout_constraintVertical_bias="0.809" />
 </androidx.constraintlayout.widget.ConstraintLayout>

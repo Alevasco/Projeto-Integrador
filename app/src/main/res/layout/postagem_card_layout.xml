@@ -5,11 +5,13 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_margin="10dp"
+    app:cardCornerRadius="15dp"
     app:cardElevation="10dp">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@drawable/background"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -34,14 +36,15 @@
             android:id="@+id/feedPerfil"
             android:layout_width="111dp"
             android:layout_height="94dp"
-            app:srcCompat="@drawable/_27366"
-            android:contentDescription="TODO" />
+            android:contentDescription="TODO"
+            app:srcCompat="@drawable/_27366" />
 
         <TextView
             android:id="@+id/feedTitulo"
             android:layout_width="374dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="12dp"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="34sp"
@@ -51,6 +54,8 @@
             android:id="@+id/feedDescricao"
             android:layout_width="374dp"
             android:layout_height="44dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
             android:textAlignment="textStart"
             android:textColor="#000000"
             android:textSize="16sp"
@@ -61,11 +66,11 @@
             android:layout_width="350dp"
             android:layout_height="300dp"
             android:layout_marginStart="12dp"
-            android:layout_marginTop="24dp"
+            android:layout_marginTop="10dp"
             android:layout_marginEnd="12dp"
+            android:contentDescription="TODO"
             android:scaleType="centerCrop"
-            app:srcCompat="@drawable/_27366"
-            android:contentDescription="TODO" />
+            app:srcCompat="@drawable/_27366" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

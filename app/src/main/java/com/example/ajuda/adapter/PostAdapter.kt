@@ -19,9 +19,10 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         var nome = view.findViewById<TextView>(R.id.feedNome)
         var titulo = view.findViewById<TextView>(R.id.feedTitulo)
         var descricao = view.findViewById<TextView>(R.id.feedDescricao)
-        var imagemPerfil = view.findViewById<ImageView>(R.id.feedPerfil)
+        var imagemPerfil = view.findViewById<ImageView>(R.id.feedImagem)
         var imagemPost = view.findViewById<ImageView>(R.id.feedImagem)
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
+
 
     }
 
