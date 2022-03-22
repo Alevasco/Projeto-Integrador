@@ -1,0 +1,53 @@
+package com.example.ajuda.adapter
+
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.TextView
+import androidx.recyclerview.widget.RecyclerView
+import com.example.ajuda.R
+import com.example.ajuda.model.Postagem
+
+class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+
+    private var postList = emptyList<Postagem>()
+
+    class PostViewHolder (view: View) : RecyclerView.ViewHolder(view) {
+
+        var nome = view.findViewById<TextView>(R.id.feedNome)
+        var titulo = view.findViewById<TextView>(R.id.feedTitulo)
+        var descricao = view.findViewById<TextView>(R.id.feedDescricao)
+        var imagemPerfil = view.findViewById<TextView>(R.id.feedPerfil)
+        var imagemPost = view.findViewById<TextView>(R.id.feedImagem)
+        var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
+
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PostViewHolder {
+        val layout = LayoutInflater.from(parent.context)
+            .inflate(R.layout.postagem_card_layout, parent, false)
+
+        return PostViewHolder(layout)
+    }
+
+    override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
+        val post = postList[position]
+
+        holder.nome.text = post.nome
+        holder.descricao.text = post.descricao
+        holder.titulo.text = post.titulo
+        holder.imagemPost.text = post.imagemPost
+        holder.imagemPerfil.text = post.imagemPerfil
+    }
+
+    override fun getItemCount(): Int {
+        return postList.size
+    }
+
+    fun setList(list: List<Postagem>) {
+        postList = list
+        notifyDataSetChanged()
+    }
+
+}

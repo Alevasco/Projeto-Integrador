@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/listaPostagemFragment">
+    <fragment
+        android:id="@+id/postagemFragment"
+        android:name="com.example.ajuda.PostagemFragment"
+        android:label="fragment_postagem"
+        tools:layout="@layout/fragment_postagem" >
+        <action
+            android:id="@+id/action_postagemFragment_to_listaPostagemFragment"
+            app:destination="@id/listaPostagemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listaPostagemFragment"
+        android:name="com.example.ajuda.ListaPostagemFragment"
+        android:label="fragment_lista_postagem"
+        tools:layout="@layout/fragment_lista_postagem" >
+        <action
+            android:id="@+id/action_listaPostagemFragment_to_postagemFragment"
+            app:destination="@id/postagemFragment" />
+    </fragment>
+</navigation>
