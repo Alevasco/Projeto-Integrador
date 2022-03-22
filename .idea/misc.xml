@@ -5,6 +5,10 @@
       <map>
         <entry key="..\:/Users/Alien/AndroidStudioProjects/Ajuda/app/src/main/res/drawable/background.xml" value="0.1805" />
         <entry key="..\:/Users/Alien/AndroidStudioProjects/Ajuda/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ftsuy/OneDrive/Documentos/cursoGeneration/P.I/Projeto-Integrador/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/ftsuy/OneDrive/Documentos/cursoGeneration/P.I/Projeto-Integrador/app/src/main/res/layout/fragment_lista_postagem.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/ftsuy/OneDrive/Documentos/cursoGeneration/P.I/Projeto-Integrador/app/src/main/res/layout/fragment_postagem.xml" value="0.22" />
+        <entry key="..\:/Users/ftsuy/OneDrive/Documentos/cursoGeneration/P.I/Projeto-Integrador/app/src/main/res/layout/postagem_card_layout.xml" value="0.33" />
       </map>
     </option>
   </component>
