@@ -20,6 +20,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#006064"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
