@@ -10,17 +10,21 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ajuda.adapter.PostAdapter
+import com.example.ajuda.databinding.FragmentListaPostagemBinding
+import com.example.ajuda.databinding.FragmentPostagemBinding
 import com.example.ajuda.model.Postagem
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListaPostagemFragment : Fragment() {
+
+    private lateinit var binding: FragmentListaPostagemBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view  = inflater.inflate(R.layout.fragment_lista_postagem, container, false)
+        binding = FragmentListaPostagemBinding.inflate(layoutInflater, container, false)
 
         val listaPostagens = listOf<Postagem>(
             Postagem(
@@ -44,24 +48,20 @@ class ListaPostagemFragment : Fragment() {
             )
         )
 
-        val recyclerListPost = view.findViewById<RecyclerView>(R.id.recycler)
-
         val adpterListPost = PostAdapter()
 
-        recyclerListPost.layoutManager = LinearLayoutManager(context)
+        binding.recycler.layoutManager = LinearLayoutManager(context)
 
-        recyclerListPost.adapter = adpterListPost
+        binding.recycler.adapter = adpterListPost
 
-        recyclerListPost.setHasFixedSize(true)
+        binding.recycler.setHasFixedSize(true)
 
         adpterListPost.setList(listaPostagens)
 
-        val butaoAdd = view.findViewById<FloatingActionButton>(R.id.buttonAdicionar)
-
-        butaoAdd.setOnClickListener {
+        binding.buttonAdicionar.setOnClickListener {
             findNavController().navigate(R.id.action_listaPostagemFragment_to_postagemFragment)
         }
 
-        return view
+        return binding.root
     }
 }

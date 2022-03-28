@@ -6,25 +6,51 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.navigation.fragment.findNavController
+import com.example.ajuda.databinding.FragmentPostagemBinding
 
 class PostagemFragment : Fragment() {
 
+    private lateinit var binding: FragmentPostagemBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_postagem, container, false)
+        binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
 
-        val butaoPubli = view.findViewById<Button>(R.id.buttonPublicar)
+        binding.buttonPublicar.setOnClickListener {
+            if(verificarCampos()) {
 
-        butaoPubli.setOnClickListener {
-            findNavController().navigate(R.id.action_postagemFragment_to_listaPostagemFragment)
+                Toast.makeText(
+                    context,"Postagem salva com sucesso",
+                    Toast.LENGTH_LONG).show()
+
+                findNavController().navigate(R.id.action_postagemFragment_to_listaPostagemFragment)
+
+            }else {
+                Toast.makeText(
+                    context,"Preencha todos os campos",
+                    Toast.LENGTH_LONG).show()
+            }
+
         }
 
-        return view
+        return binding.root
+    }
+
+    private fun verificarCampos(): Boolean {
+        if (binding.textTitulo.text.isEmpty() ||
+            binding.textDescricao.text.isEmpty() ||
+            binding.textLinkImagem.text.isEmpty()
+        ) {
+            return false
+
+        }else {
+            return true
+        }
     }
 
 }
