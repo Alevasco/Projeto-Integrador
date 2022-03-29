@@ -36,7 +36,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
     override fun onBindViewHolder(holder: PostViewHolder, position: Int) {
         val post = postList[position]
 
-        holder.nome.text = post.nome
+        holder.nome.text = post.autor
         holder.descricao.text = post.descricao
         holder.titulo.text = post.titulo
     }
