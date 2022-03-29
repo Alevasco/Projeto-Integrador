@@ -1,10 +1,12 @@
 package com.example.ajuda.model
 
 class Postagem(
-    var nome: String,
+    var id: Int,
     var titulo: String,
     var descricao: String,
-    var imagemPerfil: String,
-    var imagemPost: String
+    var imagem: String,
+    var dataHora: String,
+    var autor: String,
+    var tema: Tema
 ) {
 }
