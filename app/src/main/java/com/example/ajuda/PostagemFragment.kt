@@ -15,6 +15,7 @@ import androidx.navigation.fragment.findNavController
 import com.example.ajuda.databinding.FragmentPostagemBinding
 import com.example.ajuda.model.Postagem
 import com.example.ajuda.model.Tema
+import java.time.LocalDate
 
 class PostagemFragment : Fragment() {
 
@@ -86,7 +87,7 @@ class PostagemFragment : Fragment() {
         val titulo = binding.textTitulo.text.toString()
         val desc = binding.textDescricao.text.toString()
         val imagem = binding.textLinkImagem.text.toString()
-        val dataHora = binding.textData.text.toString()
+        val dataHora = LocalDate.now().toString()
         val autor = binding.textNome.text.toString()
         val tema = Tema(temaSelecionado, null, null)
 

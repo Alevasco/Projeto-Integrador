@@ -23,8 +23,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         var imagemPerfil = view.findViewById<ImageView>(R.id.feedImagem)
         var imagemPost = view.findViewById<ImageView>(R.id.feedImagem)
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
-        var tema = view.findViewById<TextView>(R.id.spinnerCategoria)
-
+        var tema = view.findViewById<TextView>(R.id.textTema)
 
     }
 

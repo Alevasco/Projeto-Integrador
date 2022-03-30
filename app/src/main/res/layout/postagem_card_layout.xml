@@ -24,6 +24,13 @@
             android:textColor="@color/black"
             android:textSize="20sp"
             tools:text="Nome" />
+
+        <TextView
+            android:id="@+id/textTema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Tema" />
     </LinearLayout>
 
     <LinearLayout
