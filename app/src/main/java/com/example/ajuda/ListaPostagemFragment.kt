@@ -44,6 +44,12 @@ class ListaPostagemFragment : Fragment() {
             findNavController().navigate(R.id.action_listaPostagemFragment_to_postagemFragment)
         }
 
+        mainViewModel.myPostagemResponse.observe(viewLifecycleOwner){
+            response -> if(response != null){
+                adpterListPost.setList(response.body()!!)
+            }
+        }
+
         return binding.root
     }
 }

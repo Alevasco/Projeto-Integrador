@@ -9,14 +9,14 @@ import retrofit2.http.POST
 
 interface ApiService {
 
-    @GET("Tema")
+    @GET("temas")
     suspend fun listTema(): Response<List<Tema>>
 
-    @POST("Postagem")
+    @POST("postagem")
     suspend fun addPost(
         @Body postagem: Postagem
     ): Response<Postagem>
 
-    @GET("Postagem")
+    @GET("postagem")
     suspend fun listPost(): Response<List<Postagem>>
 }

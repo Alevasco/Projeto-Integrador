@@ -1,6 +1,7 @@
+
 package com.example.ajuda.model
 
-class Postagem(
+data class Postagem(
     var id: Int,
     var titulo: String,
     var descricao: String,
@@ -9,4 +10,6 @@ class Postagem(
     var autor: String,
     var tema: Tema
 ) {
+
+
 }

@@ -62,10 +62,8 @@
         android:layout_marginTop="34dp"
         android:text="Nome Usuario"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/textTitulo"
         app:layout_constraintStart_toEndOf="@+id/imagePerfil"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.122" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonPublicar"
@@ -109,4 +107,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLinkImagem"
         app:layout_constraintVertical_bias="0.809" />
+
+    <TextView
+        android:id="@+id/textData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:text="Data "
+        app:layout_constraintBottom_toTopOf="@+id/textTitulo"
+        app:layout_constraintStart_toEndOf="@+id/imagePerfil"
+        app:layout_constraintTop_toBottomOf="@+id/textNome"
+        app:layout_constraintVertical_bias="0.0" />
 </androidx.constraintlayout.widget.ConstraintLayout>

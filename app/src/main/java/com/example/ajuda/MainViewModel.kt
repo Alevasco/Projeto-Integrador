@@ -49,6 +49,7 @@ class MainViewModel @Inject constructor(
         viewModelScope.launch {
             try {
                 repository.addPost(postagem)
+                listPost()
             }catch (e: Exception){
                 Log.d("Erro", e.message.toString())
             }
