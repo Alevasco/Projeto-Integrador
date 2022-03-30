@@ -17,7 +17,7 @@ import com.example.ajuda.model.Postagem
 import com.example.ajuda.model.Tema
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class ListaPostagemFragment : Fragment() {
+class   ListaPostagemFragment : Fragment() {
 
     private lateinit var binding: FragmentListaPostagemBinding
     private val mainViewModel: MainViewModel by activityViewModels()
@@ -45,7 +45,7 @@ class ListaPostagemFragment : Fragment() {
         }
 
         mainViewModel.myPostagemResponse.observe(viewLifecycleOwner){
-            response -> if(response != null){
+            response -> if(response.body() != null){
                 adpterListPost.setList(response.body()!!)
             }
         }
