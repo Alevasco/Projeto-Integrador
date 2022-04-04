@@ -20,6 +20,7 @@ import java.time.LocalDate
 class PostagemFragment : Fragment() {
 
     private var temaSelecionado = 0L
+    private var postagemSelecionada: Postagem? = null
     private lateinit var binding: FragmentPostagemBinding
     private  val mainViewModel: MainViewModel by activityViewModels()
 
@@ -30,6 +31,7 @@ class PostagemFragment : Fragment() {
         // Inflate the layout for this fragment
         binding = FragmentPostagemBinding.inflate(layoutInflater, container, false)
 
+        carregarDados()
 
         mainViewModel.myTemaResponse.observe(viewLifecycleOwner){
             response -> Log.d("ErroRequisicao", response.body().toString())
@@ -92,10 +94,18 @@ class PostagemFragment : Fragment() {
         val tema = Tema(temaSelecionado, null, null)
 
         if(verificarCampos(titulo,desc,imagem)){
-            val postagem = Postagem(
-                0, titulo, desc, imagem, dataHora, autor, tema
-            )
-            mainViewModel.addPost(postagem)
+            if(postagemSelecionada == null) {
+                val postagem = Postagem(
+                    0, titulo, desc, imagem, dataHora, autor, tema
+                )
+                mainViewModel.addPost(postagem)
+            }else{
+                val postagem = Postagem(
+                    postagemSelecionada?.id!!,
+                    titulo, desc, imagem, dataHora, autor, tema
+                )
+                mainViewModel.updatePostagem(postagem)
+            }
             Toast.makeText(
              context,"Postagem salva!",
             Toast.LENGTH_LONG
@@ -108,6 +118,23 @@ class PostagemFragment : Fragment() {
             ).show()
         }
 
+    }
+
+    private fun carregarDados(){
+        postagemSelecionada = mainViewModel.postagemSelecionada
+        if (postagemSelecionada != null){
+            binding.textTitulo.setText(postagemSelecionada?.titulo)
+            binding.textDescricao.setText(postagemSelecionada?.descricao)
+            binding.textLinkImagem.setText(postagemSelecionada?.imagem)
+            binding.textNome.setText(postagemSelecionada?.autor)
+            binding.textData.setText(postagemSelecionada?.dataHora)
+        }else{
+            binding.textTitulo.text = null
+            binding.textDescricao.text = null
+            binding.textNome.text = null
+            binding.textLinkImagem.text = null
+            binding.textData.text = null
+        }
     }
 
   }

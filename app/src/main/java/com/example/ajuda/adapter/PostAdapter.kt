@@ -3,15 +3,18 @@ package com.example.ajuda.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.Spinner
-import android.widget.TextView
+import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
+import com.example.ajuda.MainActivity
+import com.example.ajuda.MainViewModel
 import com.example.ajuda.R
 import com.example.ajuda.model.Postagem
 
-class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+class PostAdapter(
+    private var taskItemClickListener: TaskItemClickListener,
+    private var mainViewModel: MainViewModel
+
+): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
 
     private var postList = emptyList<Postagem>()
 
@@ -24,6 +27,7 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         var imagemPost = view.findViewById<ImageView>(R.id.feedImagem)
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
         var tema = view.findViewById<TextView>(R.id.textTema)
+        var button = view.findViewById<ImageButton>(R.id.buttonEdit)
 
     }
 
@@ -41,6 +45,15 @@ class PostAdapter: RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
         holder.descricao.text = post.descricao
         holder.titulo.text = post.titulo
         holder.tema.text = post.tema.descricao
+        holder.itemView.setOnClickListener {
+
+        }
+
+        holder.button.setOnClickListener {
+            mainViewModel.updatePostagem(post)
+            taskItemClickListener.onTaskClicked(post)
+        }
+
     }
 
     override fun getItemCount(): Int {

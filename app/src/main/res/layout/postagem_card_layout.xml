@@ -25,12 +25,14 @@
             android:textSize="20sp"
             tools:text="Nome" />
 
-        <TextView
-            android:id="@+id/textTema"
-            android:layout_width="wrap_content"
+        <ImageButton
+            android:id="@+id/buttonEdit"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
             android:layout_weight="1"
-            tools:text="Tema" />
+            android:minHeight="48dp"
+            app:srcCompat="@drawable/ic_baseline_edit_24" />
     </LinearLayout>
 
     <LinearLayout
@@ -78,6 +80,13 @@
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/_27366" />
+
+        <TextView
+            android:id="@+id/textTema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Tema" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

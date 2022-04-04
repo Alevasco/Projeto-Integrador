@@ -11,13 +11,14 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ajuda.adapter.PostAdapter
+import com.example.ajuda.adapter.TaskItemClickListener
 import com.example.ajuda.databinding.FragmentListaPostagemBinding
 import com.example.ajuda.databinding.FragmentPostagemBinding
 import com.example.ajuda.model.Postagem
 import com.example.ajuda.model.Tema
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class   ListaPostagemFragment : Fragment() {
+class   ListaPostagemFragment : Fragment(), TaskItemClickListener {
 
     private lateinit var binding: FragmentListaPostagemBinding
     private val mainViewModel: MainViewModel by activityViewModels()
@@ -31,7 +32,7 @@ class   ListaPostagemFragment : Fragment() {
 
         mainViewModel.listPost()
 
-        val adpterListPost = PostAdapter()
+        val adpterListPost = PostAdapter(this, mainViewModel)
 
         binding.recycler.layoutManager = LinearLayoutManager(context)
 
@@ -41,6 +42,7 @@ class   ListaPostagemFragment : Fragment() {
 
 
         binding.buttonAdicionar.setOnClickListener {
+            mainViewModel.postagemSelecionada = null
             findNavController().navigate(R.id.action_listaPostagemFragment_to_postagemFragment)
         }
 
@@ -51,5 +53,10 @@ class   ListaPostagemFragment : Fragment() {
         }
 
         return binding.root
+    }
+
+    override fun onTaskClicked(postagem: Postagem) {
+        mainViewModel.postagemSelecionada = postagem
+        findNavController().navigate(R.id.action_listaPostagemFragment_to_postagemFragment)
     }
 }
