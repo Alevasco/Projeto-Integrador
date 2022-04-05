@@ -5,7 +5,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.recyclerview.widget.RecyclerView
-import com.example.ajuda.MainActivity
 import com.example.ajuda.MainViewModel
 import com.example.ajuda.R
 import com.example.ajuda.model.Postagem
@@ -28,6 +27,7 @@ class PostAdapter(
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
         var tema = view.findViewById<TextView>(R.id.textTema)
         var button = view.findViewById<ImageButton>(R.id.buttonEdit)
+        var buttonDeletar = view.findViewById<Button>(R.id.buttonDeletar)
 
     }
 
@@ -50,8 +50,12 @@ class PostAdapter(
         }
 
         holder.button.setOnClickListener {
-            mainViewModel.updatePostagem(post)
+
             taskItemClickListener.onTaskClicked(post)
+        }
+
+        holder.buttonDeletar.setOnClickListener {
+            mainViewModel.deletarPostagem(post.id)
         }
 
     }

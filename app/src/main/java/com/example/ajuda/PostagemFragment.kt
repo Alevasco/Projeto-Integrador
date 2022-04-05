@@ -128,6 +128,7 @@ class PostagemFragment : Fragment() {
             binding.textLinkImagem.setText(postagemSelecionada?.imagem)
             binding.textNome.setText(postagemSelecionada?.autor)
             binding.textData.setText(postagemSelecionada?.dataHora)
+            binding.spinnerCategoria.setSelection(postagemSelecionada!!.tema.id!!.toInt())
         }else{
             binding.textTitulo.text = null
             binding.textDescricao.text = null

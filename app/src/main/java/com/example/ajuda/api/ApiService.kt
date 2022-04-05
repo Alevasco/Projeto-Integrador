@@ -3,10 +3,7 @@ package com.example.ajuda.api
 import com.example.ajuda.model.Postagem
 import com.example.ajuda.model.Tema
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
-import retrofit2.http.PUT
+import retrofit2.http.*
 
 interface ApiService {
 
@@ -24,6 +21,11 @@ interface ApiService {
     @PUT("postagens")
     suspend fun updatePostagem(
         @Body postagens: Postagem
+    ): Response<Postagem>
+
+    @DELETE("postagens/{id}")
+    suspend fun deletarPostagem(
+        @Path("id") valor: Long
     ): Response<Postagem>
 
 }

@@ -33,6 +33,7 @@
             android:layout_weight="1"
             android:minHeight="48dp"
             app:srcCompat="@drawable/ic_baseline_edit_24" />
+
     </LinearLayout>
 
     <LinearLayout
@@ -87,6 +88,12 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:text="Tema" />
+
+        <Button
+            android:id="@+id/buttonDeletar"
+            android:layout_width="136dp"
+            android:layout_height="38dp"
+            android:text="Deletar Postagem" />
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>
