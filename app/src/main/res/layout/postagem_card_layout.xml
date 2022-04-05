@@ -31,6 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="60dp"
             android:layout_weight="1"
+            android:contentDescription="@string/editPostagemButton"
             android:minHeight="48dp"
             app:srcCompat="@drawable/ic_baseline_edit_24" />
 
@@ -48,6 +49,13 @@
             android:layout_height="94dp"
             android:contentDescription="TODO"
             app:srcCompat="@drawable/_27366" />
+
+        <TextView
+            android:id="@+id/textTema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            tools:text="Tema" />
 
         <TextView
             android:id="@+id/feedTitulo"
@@ -82,18 +90,12 @@
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/_27366" />
 
-        <TextView
-            android:id="@+id/textTema"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Tema" />
-
         <Button
             android:id="@+id/buttonDeletar"
             android:layout_width="136dp"
-            android:layout_height="38dp"
+            android:layout_height="48dp"
             android:text="Deletar Postagem" />
+
     </LinearLayout>
 
 </androidx.cardview.widget.CardView>

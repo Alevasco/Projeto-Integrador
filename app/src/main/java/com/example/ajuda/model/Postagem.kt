@@ -2,7 +2,7 @@
 package com.example.ajuda.model
 
 data class Postagem(
-    var id: Long,
+    val id: Long,
     var titulo: String,
     var descricao: String,
     var imagem: String,

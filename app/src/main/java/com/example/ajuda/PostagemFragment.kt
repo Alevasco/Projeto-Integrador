@@ -33,6 +33,8 @@ class PostagemFragment : Fragment() {
 
         carregarDados()
 
+        mainViewModel.listPost()
+
         mainViewModel.myTemaResponse.observe(viewLifecycleOwner){
             response -> Log.d("ErroRequisicao", response.body().toString())
             spinnerTema(response.body())
