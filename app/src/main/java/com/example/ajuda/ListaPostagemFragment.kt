@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import androidx.fragment.app.DialogFragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -18,7 +19,7 @@ import com.example.ajuda.model.Postagem
 import com.example.ajuda.model.Tema
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class   ListaPostagemFragment : Fragment(), TaskItemClickListener {
+class   ListaPostagemFragment : Fragment(), TaskItemClickListener{
 
     private lateinit var binding: FragmentListaPostagemBinding
     private val mainViewModel: MainViewModel by activityViewModels()
@@ -32,7 +33,7 @@ class   ListaPostagemFragment : Fragment(), TaskItemClickListener {
 
         mainViewModel.listPost()
 
-        val adpterListPost = PostAdapter(this, mainViewModel)
+        val adpterListPost = PostAdapter(this, mainViewModel, context!!)
 
         binding.recycler.layoutManager = LinearLayoutManager(context)
 
