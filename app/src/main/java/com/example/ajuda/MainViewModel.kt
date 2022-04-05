@@ -69,10 +69,10 @@ class MainViewModel @Inject constructor(
         }
     }
 
-    fun updatePostagem(postagem: Postagem){
+    fun updatePostagem(postagens: Postagem){
         viewModelScope.launch {
             try{
-                repository.updatePostagem(postagem)
+                repository.updatePostagem(postagens)
                 listPost()
             }catch (e: Exception){
                 Log.d("Erro", e.message.toString())

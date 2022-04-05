@@ -5,6 +5,6 @@ import com.example.ajuda.model.Tema
 
 interface TaskItemClickListener {
 
-    fun onTaskClicked(postagem: Postagem)
+    fun onTaskClicked(postagens: Postagem)
 
 }

@@ -46,11 +46,9 @@ class PostAdapter(
         holder.titulo.text = post.titulo
         holder.tema.text = post.tema.descricao
         holder.itemView.setOnClickListener {
-
         }
 
         holder.button.setOnClickListener {
-
             taskItemClickListener.onTaskClicked(post)
         }
 

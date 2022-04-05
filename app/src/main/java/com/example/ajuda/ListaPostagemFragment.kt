@@ -55,8 +55,8 @@ class   ListaPostagemFragment : Fragment(), TaskItemClickListener {
         return binding.root
     }
 
-    override fun onTaskClicked(postagem: Postagem) {
-        mainViewModel.postagemSelecionada = postagem
+    override fun onTaskClicked(postagens: Postagem) {
+        mainViewModel.postagemSelecionada = postagens
         findNavController().navigate(R.id.action_listaPostagemFragment_to_postagemFragment)
     }
 }
