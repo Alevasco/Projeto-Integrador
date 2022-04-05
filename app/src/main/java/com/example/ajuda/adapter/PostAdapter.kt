@@ -1,5 +1,7 @@
 package com.example.ajuda.adapter
 
+import android.app.AlertDialog
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,9 +13,10 @@ import com.example.ajuda.model.Postagem
 
 class PostAdapter(
     private var taskItemClickListener: TaskItemClickListener,
-    private var mainViewModel: MainViewModel
+    private var mainViewModel: MainViewModel,
+    private var context: Context
 
-): RecyclerView.Adapter<PostAdapter.PostViewHolder>() {
+): RecyclerView.Adapter<PostAdapter.PostViewHolder>(){
 
     private var postList = emptyList<Postagem>()
 
@@ -51,7 +54,8 @@ class PostAdapter(
         }
 
         holder.buttonDeletar.setOnClickListener {
-            mainViewModel.deletarPostagem(post.id)
+            createDialog(post)
+            //
         }
 
     }
@@ -63,6 +67,20 @@ class PostAdapter(
     fun setList(list: List<Postagem>) {
         postList = list
         notifyDataSetChanged()
+    }
+
+    fun createDialog(post: Postagem) {
+        val alert = androidx.appcompat.app.AlertDialog.Builder(context)
+        alert.setTitle("DELETAR")
+        alert.setMessage("Deseja mesmo deletar o Post")
+        alert.setPositiveButton("Sim", {dialog, id ->
+            dialog.cancel()
+            mainViewModel.deletarPostagem(post.id)
+        })
+        alert.setNegativeButton("Não", {dialog, id ->
+            dialog.cancel()
+        })
+        alert.show()
     }
 
 }

@@ -93,7 +93,7 @@
         <Button
             android:id="@+id/buttonDeletar"
             android:layout_width="136dp"
-            android:layout_height="48dp"
+            android:layout_height="54dp"
             android:text="Deletar Postagem" />
 
     </LinearLayout>
