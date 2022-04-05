@@ -98,9 +98,13 @@ class PostagemFragment : Fragment() {
         if(verificarCampos(titulo,desc,imagem)){
             if(postagemSelecionada == null) {
                 val postagem = Postagem(
-                    0, titulo, desc, imagem, dataHora, autor, tema
+                    0, titulo, desc, imagem, dataHora, "Autor", tema
                 )
                 mainViewModel.addPost(postagem)
+                Toast.makeText(
+                    context,"Postagem salva!",
+                    Toast.LENGTH_LONG
+                ).show()
             }else{
                 val postagem = Postagem(
                     postagemSelecionada?.id!!,
@@ -108,11 +112,9 @@ class PostagemFragment : Fragment() {
                 )
                 mainViewModel.updatePostagem(postagem)
             }
-            Toast.makeText(
-             context,"Postagem salva!",
-            Toast.LENGTH_LONG
-            ).show()
+
             findNavController().navigate(R.id.action_postagemFragment_to_listaPostagemFragment)
+
         }else{
             Toast.makeText(
                 context,"Preencha os campos corretamente!",

@@ -26,7 +26,7 @@ class PostAdapter(
         var imagemPost = view.findViewById<ImageView>(R.id.feedImagem)
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
         var tema = view.findViewById<TextView>(R.id.textTema)
-        var button = view.findViewById<ImageButton>(R.id.buttonEdit)
+        var buttonEditar = view.findViewById<ImageButton>(R.id.buttonEdit)
         var buttonDeletar = view.findViewById<Button>(R.id.buttonDeletar)
 
     }
@@ -45,10 +45,8 @@ class PostAdapter(
         holder.descricao.text = post.descricao
         holder.titulo.text = post.titulo
         holder.tema.text = post.tema.descricao
-        holder.itemView.setOnClickListener {
-        }
 
-        holder.button.setOnClickListener {
+        holder.buttonEditar.setOnClickListener {
             taskItemClickListener.onTaskClicked(post)
         }
 

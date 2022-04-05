@@ -12,7 +12,7 @@ interface ApiService {
 
     @POST("postagens")
     suspend fun addPost(
-        @Body postagem: Postagem
+        @Body postagens: Postagem
     ): Response<Postagem>
 
     @GET("postagens")
