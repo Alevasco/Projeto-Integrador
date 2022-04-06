@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Ajuda+</string>
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="floactingActionButton">Ir para a tela de postagem</string>
     <string name="editPostagemButton">Ediar a postagem</string>
+    <string name="entrar">Entrar</string>
+    <string name="text_cadastro">Criar uma conta</string>
+    <string name="email">Email</string>
+    <string name="senha">Senha</string>
 </resources>
