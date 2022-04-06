@@ -92,15 +92,10 @@
             tools:text=" Descrição" />
 
         <ImageView
-            android:id="@+id/feedImagem"
+            android:id="@+id/imageFeed"
             android:layout_width="match_parent"
-            android:layout_height="300dp"
-            android:layout_marginStart="12dp"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="12dp"
-            android:contentDescription="TODO"
-            android:scaleType="centerCrop"
-            app:srcCompat="@drawable/_27366" />
+            android:layout_height="241dp"
+            app:srcCompat="@android:drawable/ic_menu_report_image" />
 
     </LinearLayout>
 
