@@ -7,4 +7,10 @@
     <string name="text_cadastro">Criar uma conta</string>
     <string name="email">Email</string>
     <string name="senha">Senha</string>
+    <string name="nome">Nome</string>
+    <string name="cadastro">Cadastrar</string>
+    <string name="confirmar">Confirmar Senha</string>
+    <string name="excluir">Excluir</string>
+
+
 </resources>

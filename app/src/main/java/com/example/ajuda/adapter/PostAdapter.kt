@@ -30,7 +30,7 @@ class PostAdapter(
         var botãoPostar = view.findViewById<Button>(R.id.buttonPublicar)
         var tema = view.findViewById<TextView>(R.id.textTema)
         var buttonEditar = view.findViewById<ImageButton>(R.id.buttonEdit)
-        var buttonDeletar = view.findViewById<Button>(R.id.buttonDeletar)
+        var buttonDeletar = view.findViewById<ImageButton>(R.id.buttonDeletar)
 
     }
 
