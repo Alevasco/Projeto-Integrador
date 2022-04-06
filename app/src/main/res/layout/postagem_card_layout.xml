@@ -11,7 +11,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@drawable/background"
+        android:background="@color/white"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -27,13 +27,23 @@
 
         <ImageButton
             android:id="@+id/buttonEdit"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="60dp"
-            android:layout_weight="1"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="80dp"
+            android:backgroundTint="#C5C1C1"
             android:contentDescription="@string/editPostagemButton"
-            android:minHeight="48dp"
-            app:srcCompat="@drawable/ic_baseline_edit_24" />
+            android:src="@drawable/ic_baseline_edit_24" />
+
+        <ImageButton
+            android:id="@+id/buttonDeletar"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="3dp"
+            android:backgroundTint="#C5C1C1"
+            android:contentDescription="@string/excluir"
+            android:src="@drawable/ic_delete"
+
+            />
 
     </LinearLayout>
 
@@ -54,8 +64,11 @@
             android:id="@+id/textTema"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            tools:text="Tema" />
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
+            tools:text="Tema"
+            android:textSize="20sp"
+            />
 
         <TextView
             android:id="@+id/feedTitulo"
@@ -63,7 +76,6 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="10dp"
             android:layout_marginTop="12dp"
-            android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="34sp"
             tools:text="Título" />
@@ -76,7 +88,7 @@
             android:layout_marginTop="10dp"
             android:textAlignment="textStart"
             android:textColor="#000000"
-            android:textSize="16sp"
+            android:textSize="18sp"
             tools:text=" Descrição" />
 
         <ImageView
@@ -89,12 +101,6 @@
             android:contentDescription="TODO"
             android:scaleType="centerCrop"
             app:srcCompat="@drawable/_27366" />
-
-        <Button
-            android:id="@+id/buttonDeletar"
-            android:layout_width="136dp"
-            android:layout_height="54dp"
-            android:text="Deletar Postagem" />
 
     </LinearLayout>
 
