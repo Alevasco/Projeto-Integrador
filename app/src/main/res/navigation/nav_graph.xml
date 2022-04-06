@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listaPostagemFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/postagemFragment"
         android:name="com.example.ajuda.PostagemFragment"
@@ -21,5 +21,17 @@
         <action
             android:id="@+id/action_listaPostagemFragment_to_postagemFragment"
             app:destination="@id/postagemFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.example.ajuda.loginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_listaPostagemFragment"
+            app:destination="@id/listaPostagemFragment" />
+        <action
+            android:id="@+id/action_loginFragment_to_listaPostagemFragment2"
+            app:destination="@id/listaPostagemFragment" />
     </fragment>
 </navigation>
