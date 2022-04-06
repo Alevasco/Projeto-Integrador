@@ -70,7 +70,7 @@ class PostAdapter(
     }
 
     fun setList(list: List<Postagem>) {
-        postList = list
+        postList = list.sortedBy { it.id }
         notifyDataSetChanged()
     }
 

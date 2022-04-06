@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/listaPostagemFragment">
+    app:startDestination="@id/loginFragment">
     <fragment
         android:id="@+id/postagemFragment"
         android:name="com.example.ajuda.PostagemFragment"
@@ -24,24 +24,32 @@
     </fragment>
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.example.ajuda.loginFragment"
+        android:name="com.example.ajuda.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
-            android:id="@+id/action_loginFragment_to_listaPostagemFragment"
-            app:destination="@id/listaPostagemFragment" />
+            android:id="@+id/action_loginFragment_to_cadastroFragment"
+            app:destination="@id/cadastroFragment" />
         <action
-            android:id="@+id/action_loginFragment_to_listaPostagemFragment2"
-            app:destination="@id/listaPostagemFragment" />
+            android:id="@+id/action_loginFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
     </fragment>
     <fragment
         android:id="@+id/cadastroFragment"
         android:name="com.example.ajuda.cadastroFragment"
         android:label="fragment_cadastro"
-        tools:layout="@layout/fragment_cadastro" />
+        tools:layout="@layout/fragment_cadastro" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
     <fragment
         android:id="@+id/menuFragment"
         android:name="com.example.ajuda.menuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_listaPostagemFragment"
+            app:destination="@id/listaPostagemFragment" />
+    </fragment>
 </navigation>
