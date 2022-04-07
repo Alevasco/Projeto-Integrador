@@ -11,7 +11,8 @@
     <EditText
         android:id="@+id/textLinkImagem"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        style="@style/Edit_Text"
+        android:layout_height="60dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="25dp"
@@ -28,8 +29,9 @@
 
     <EditText
         android:id="@+id/textDescricao"
+        style="@style/Edit_Text"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="25dp"
@@ -38,6 +40,7 @@
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#006064"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -59,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="32dp"
         android:text="Nome Usuario"
         android:textColor="@color/black"
         app:layout_constraintStart_toEndOf="@+id/imagePerfil"
@@ -70,7 +73,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
-        android:layout_marginEnd="24dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="@color/teal_700"
         android:text="Postar"
         app:cornerRadius="10dp"
@@ -79,16 +82,17 @@
 
     <EditText
         android:id="@+id/textTitulo"
+        style="@style/Edit_Text"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="60dp"
         android:layout_marginStart="25dp"
         android:layout_marginTop="80dp"
         android:layout_marginEnd="25dp"
-        android:ems="10"
         android:hint="Coloque o título"
         android:inputType="textPersonName"
         android:minHeight="48dp"
         android:textColor="@color/black"
+        android:textColorHint="#006064"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -96,17 +100,19 @@
 
     <Spinner
         android:id="@+id/spinnerCategoria"
+        style="@style/Edit_Text"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="58dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
         android:contentDescription="@string/app_name"
         android:minHeight="48dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textLinkImagem"
-        app:layout_constraintVertical_bias="0.809" />
+        app:layout_constraintVertical_bias="0.695" />
 
     <TextView
         android:id="@+id/textData"
