@@ -11,7 +11,7 @@
             
             
 <div>
-<img src="https://media.discordapp.net/attachments/938409165657878639/961805775695650856/aJUDA_3.jpg?width=763&height=572" width="700px" />
+<img src="https://media.discordapp.net/attachments/938409165657878639/961819200802922526/aJUDA_7.jpg?width=812&height=609" width="700px" />
 </div>
             
             
